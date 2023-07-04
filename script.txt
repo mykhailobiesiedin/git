@@ -1,6 +1,9 @@
+vi task_Mykhailo_Biesiedin.sh
 #!/bin/bash
 timestamp=$(date +'%Y%m%d_%H%M%S')
 for ((i = 1; i <= 10; i++)); do
 filename="${i}${timestamp}.txt"
 touch "$filename"
 done
+crontab -e
+*/15 * * * * /bin/task_Mykhailo_Biesiedin.sh
